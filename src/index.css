@@ -1,0 +1,84 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  transition: duration-300;
+  text-decoration: none;
+  list-style-type: none;
+}
+
+
+@layer base{
+  @font-face{
+    font-family: 'Satoshi';
+    src: local('Satoshi-Medium.otf'),
+    url('../src/assets/fonts/Satoshi/Satoshi-Medium.otf') format('opentype');
+  }
+
+  @font-face{
+    font-family: 'Gambetta';
+    src: local('Gambetta-Medium.otf'),
+    url('../src/assets/fonts/Gambetta/Gambetta-Medium.otf') format('opentype');
+  }
+
+  @font-face{
+    font-family: 'Teko';
+    src: local('Teko-Medium.otf'),
+    url('../src/assets/fonts/Teko/Teko-Medium.otf') format('opentype');
+  }
+
+  @font-face{
+    font-family: 'Dancing Script';
+    src: local('DancingScript-Bold.ttf'),
+    url('../src/assets/fonts/DanceScript/DancingScript-Bold.otf') format('opentype');
+  }
+}
+
+
+@layer components{
+
+    /* scrollbar */
+    ::-webkit-scrollbar{
+      @apply w-[0.2rem] h-[.5rem];
+    }
+    
+    ::-webkit-scrollbar-track{
+      @apply bg-transparent;
+    }
+    ::-webkit-scrollbar-thumb{
+      @apply bg-footerBg;
+    }
+    *::selection{
+      @apply bg-toggleBg text-lightColor;
+    }
+
+  .wrapper{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+  }
+
+  .navLinks{
+    @apply block py-2 px-3 text-gray-900 rounded hover:bg-gray-100 md:hover:bg-transparent md:border-0 md:hover:text-blue-700 md:p-0 dark:text-white md:dark:hover:text-blue-500 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent font-textFont text-[1.3rem] tracking-wide font-medium;
+  }
+
+  .mainBtn{
+    @apply bg-primaryColor py-2 px-5 rounded-full tracking-wide font-textFont flex items-center transition-transform duration-300 hover:translate-x-3 xs:text-[.9rem] md:text-2xl text-lightColor hover:bg-toggleBg hover:transition-all
+  }
+
+  .icons{
+    @apply fill-lightColor size-7 cursor-pointer;
+  }
+
+  .socials{
+    @apply border-[1px] border-slate-500 w-11 h-11 rounded-full cursor-pointer px-2 mt-3 hover:border-primaryColor hover:transition-all duration-300;
+  }
+  
+
+}
+
