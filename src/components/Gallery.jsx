@@ -59,7 +59,7 @@ const Gallery = () => {
   return (
     <>
       {/* Grid layout */}
-      <section className="xs:columns-1 md:columns-2 lg:columns-4 gap-4 space-y-4">
+      <section className="xs:columns-1 sm:columns-2 md:columns-3 lg:columns-4 gap-4 space-y-4">
         {images.map((image, index) => (
           <div
             key={image.id}

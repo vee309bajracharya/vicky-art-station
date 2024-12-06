@@ -46,7 +46,7 @@ const Services = () => {
         <p className="xs:text-left md:text-justify font-textFont text-xl my-4 dark:text-lightColor leading-9">
           Discover the services of Vicky Art Station!
         </p>
-        <section className="grid xs:grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 my-6">
+        <section className="grid xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 my-6">
           {services.map((service) => (
             <div
               key={service.id}
